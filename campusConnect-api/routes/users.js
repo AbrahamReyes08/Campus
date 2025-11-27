@@ -90,5 +90,10 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
 });
+var router = require("express").Router();
+
+const userCtrl = require("../controllers/users.js");
+
+router.post("/new", userCtrl.createNewUser);
 
 module.exports = router;
