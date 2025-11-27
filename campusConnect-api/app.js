@@ -8,6 +8,7 @@ var swaggerUi = require("swagger-ui-express");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var publicacionesRouter = require("./routes/publicaciones");
 const { title } = require("process");
 
 var app = express();
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/publicaciones", publicacionesRouter);
 
 const options = {
   definition: {
